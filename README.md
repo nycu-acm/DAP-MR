@@ -1,16 +1,5 @@
 # DAP-MR: Degradation-Aware Prompting for Medical (Ultrasound) SR
 
-This is a research fork of [PiSA-SR](https://github.com/csslc/PiSA-SR) (CVPR 2025)
-that adds **LGDP** (Language-Grounded Degradation Prompting): a small router that
-reads the LR image, predicts per-degradation intensities, and injects the result as
-extra tokens into the diffusion prompt embedding — so the one-step SR model becomes
-degradation-aware without any extra UNet forward pass.
-
-This directory has been trimmed down to only what is needed to **train** and
-**run inference**. All exploratory/plotting/ablation-audit scripts have been
-removed. See [`Claude.md`](Claude.md) for how DAP-MR/LGDP is integrated into the
-PiSA-SR codebase — what was added, and exactly where in the code.
-
 ## Directory structure
 
 ```
