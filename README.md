@@ -43,7 +43,7 @@ The current implementation is built on **PiSA-SR** and supports training with
 synthetic ultrasound degradations and controllable restoration objectives.
 
 <p align="center">
-  <img src="assets/Fig2.png" alt="DAP-MR Architecture" width="900">
+  <img src="Fig2.png" alt="DAP-MR Architecture" width="900">
 </p>
 
 ---
