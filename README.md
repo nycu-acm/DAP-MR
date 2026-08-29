@@ -241,32 +241,6 @@ python test_pisasr.py \
     --output_dir experiments/<name>/output \
     --default
 ```
-
-By default, the predefined PiSA-SR restoration configuration is used.
-
-Pixel-level and semantic-level restoration strengths can also be controlled
-manually using:
-
-```text
---lambda_pix
---lambda_sem
-```
-
-instead of:
-
-```text
---default
-```
-
-For high-resolution inputs or limited GPU memory, tiled processing is
-available through:
-
-```text
---latent_tiled_size
---vae_encoder_tiled_size
---vae_decoder_tiled_size
-```
-
 ---
 
 ## ✅ Evaluation
