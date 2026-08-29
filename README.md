@@ -255,13 +255,6 @@ python test_metrics.py \
     --log experiments/<name>
 ```
 
-The current evaluation pipeline includes:
-
-- **PSNR**
-- **SSIM**
-- **LPIPS**
-- **DISTS**
-
 Experiment-specific inference and evaluation pipelines are provided in:
 
 ```text
@@ -270,12 +263,6 @@ scripts/test/*.sh
 
 These scripts typically run inference and quantitative evaluation
 sequentially.
-
-Additional downstream evaluation is available in:
-
-```text
-scripts/eval/*.sh
-```
 
 including ultrasound segmentation evaluation using models such as SAMUS.
 
