@@ -15,8 +15,13 @@
 
 ## 🧪 Abstract
 
-When super-resolution models designed for natural images are used on ultrasound scans, relying on semantic text prompts can lead to unreliable results. The tags these models generate often do not match the actual restoration needs, and specialized medical terms may be misunderstood by general-purpose text encoders. Instead, prompts focused on common image degradations are more directly useful for guiding restoration. However, using a single prompt to describe both the type and severity of image degradation can entangle these factors, making it hard for the model to know how strong the degradation is. To address this limitation, we introduce Degradation-Aware Prompt--Magnitude Routing (DAP-MR). Each degradation type is represented by a dedicated token initialized from the contextualized EOS embedding of a degradation-oriented prompt and subsequently adapted during ultrasound SR training. A separate magnitude router predicts a continuous, input-dependent magnitude that modulates the corresponding token. Thus, language provides a degradation-aware initialization for \emph{what} should be restored, while magnitude routing supplies an explicit signal for \emph{how strongly} it should influence restoration. DAP-MR can be added to both one-step and multi-step diffusion super-resolution frameworks without changing their core structures. Our experiments on synthetic datasets under both in-domain and anatomical-domain-shift settings, together with evaluations on unpaired real-world ultrasound data show that DAP-MR delivers better restoration quality and generalizes more consistently across different domains.
+<p align="justify">
+When super-resolution models designed for natural images are used on ultrasound scans, relying on semantic text prompts can lead to unreliable results. These tags often do not match the actual restoration needs, and specialized medical terms may be misunderstood by general-purpose text encoders. Instead, prompts focused on common image degradations are more directly useful for guiding restoration. However, using a single prompt to describe both the type and severity of image degradation can entangle these factors, making it hard for the model to know how strong the degradation is.
 
+To address this limitation, we introduce Degradation-Aware Prompt--Magnitude Routing (DAP-MR). Each degradation type is represented by a dedicated token initialized from the contextualized EOS embedding of a degradation-oriented prompt and subsequently adapted during ultrasound SR training. A separate magnitude router predicts a continuous, input-dependent magnitude that modulates the corresponding token. Thus, language provides a degradation-aware initialization for what should be restored, while magnitude routing supplies an explicit signal for how strongly it should influence restoration.
+
+DAP-MR can be added to both one-step and multi-step diffusion super-resolution frameworks without changing their core structures. Our experiments on synthetic datasets under both in-domain and anatomical-domain-shift settings, together with evaluations on unpaired real-world ultrasound data, show that DAP-MR delivers better restoration quality and generalizes more consistently across different domains.
+</p>
 ---
 
 ## 🏗️ Framework
@@ -37,13 +42,9 @@ DAP-MR consists of three main components:
 The current implementation is built on **PiSA-SR** and supports training with
 synthetic ultrasound degradations and controllable restoration objectives.
 
-<!--
-Add the architecture figure when available:
-
 <p align="center">
   <img src="assets/Fig2.png" alt="DAP-MR Architecture" width="900">
 </p>
--->
 
 ---
 
