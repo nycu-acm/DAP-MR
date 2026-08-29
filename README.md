@@ -41,7 +41,7 @@ synthetic ultrasound degradations and controllable restoration objectives.
 Add the architecture figure when available:
 
 <p align="center">
-  <img src="assets/architecture.png" alt="DAP-MR Architecture" width="900">
+  <img src="assets/Fig2.png" alt="DAP-MR Architecture" width="900">
 </p>
 -->
 
